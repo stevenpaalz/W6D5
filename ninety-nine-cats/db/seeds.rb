@@ -8,6 +8,6 @@
 
 ApplicationRecord.transaction do
     Cat.destroy_all
-    cat1 = Cat.new(color: 'brown', name: 'Chester', sex: 'M', birth_date: '2015/01/20')
-    cat2 = Cat.new(color: 'brown', name: 'Chester2', sex: 'M', birth_date: '2023/02/16')
+    cat1 = Cat.create(color: 'brown', name: 'Chester', sex: 'M', birth_date: '2015/01/20')
+    cat2 = Cat.create(color: 'brown', name: 'Chester2', sex: 'M', birth_date: '2023/02/16')
 end
