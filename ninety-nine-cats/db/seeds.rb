@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+ApplicationRecord.transaction do
+    Cat.destroy_all
+    cat1 = Cat.new(color: 'brown', name: 'Chester', sex: 'M', birth_date: '2015/01/20')
+    cat2 = Cat.new(color: 'brown', name: 'Chester2', sex: 'M', birth_date: '2023/02/16')
+end
