@@ -1,0 +1,11 @@
+<h2>That's our cats!</h2>
+
+<ul class = "cats-list">
+    <% @cats.each do |cat|%>
+        <a href="<%= cat_url(cat.id)%>">
+            <li>
+                <%= cat.name %>
+            </li>
+        </a>
+    <% end %>
+</ul>
